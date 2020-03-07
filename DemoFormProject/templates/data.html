@@ -1,0 +1,46 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Sars vs Corona</h1>
+<h3>the datasets and other information about SARS and Corona, about how many people were sick and how many died in each country</h3>
+
+<p>
+    these data sets  about sars and coronavirus are interesting because they allow you to see how many people died and where and you can learn a lot from this
+    like which countries managed the best and kept the people who weren't sick safe from the viruses and which countries didn't do very well' you can learn where
+    most of the people died and where most of the cases were. this subject is something i enjoy learning about and i always like to know more about it.
+</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+
+            </div>
+            <ul class="nav navbar-nav">
+
+                <li><a href="{{ url_for('corona') }}">Corona</a></li>
+                <li><a href="{{ url_for('sars') }}">SARS</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+</body>
+</html>
+
+
+
+
+{% endblock %}
