@@ -56,11 +56,16 @@
     <Content Include="DemoFormProject\static\Data\SARS1.xlsx" />
     <Content Include="DemoFormProject\static\Data\users.csv" />
     <Content Include="DemoFormProject\static\Pics\pic1.jpg" />
+    <Content Include="DemoFormProject\templates\query.html" />
     <Content Include="DemoFormProject\templates\sars.html" />
     <Content Include="DemoFormProject\templates\corona.html" />
     <Content Include="DemoFormProject\templates\data.html" />
-    <Content Include="DemoFormProject\templates\register.html" />
-    <Content Include="DemoFormProject\templates\login.html" />
+    <Content Include="..\..\register.html">
+      <Link>DemoFormProject\templates\register.html</Link>
+    </Content>
+    <Content Include="..\..\login.html">
+      <Link>DemoFormProject\templates\login.html</Link>
+    </Content>
     <Content Include="requirements.txt" />
     <Content Include="DemoFormProject\static\content\bootstrap.css" />
     <Content Include="DemoFormProject\static\content\bootstrap.min.css" />

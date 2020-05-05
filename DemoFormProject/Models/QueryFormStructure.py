@@ -8,6 +8,8 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms import Form, BooleanField, PasswordField
 from wtforms import TextField, TextAreaField, SelectField, DateField
+from wtforms import TextField, TextAreaField, SelectField, SelectMultipleField, DateField, DateTimeField
+
 from wtforms import validators, ValidationError
 
 from wtforms.validators import DataRequired
@@ -21,9 +23,11 @@ from wtforms.validators import DataRequired
 ##   the 'name' field - will be used to get the country name
 ##   the 'submit' button - the button the user will press to have the 
 ##                         form be "posted" (sent to the server for process)
-class QueryFormStructure(FlaskForm):
-    name   = StringField('Country Name:  ' , validators = [DataRequired()])
+class DataQueryFormStructure(FlaskForm):
+    states = SelectMultipleField('Select States:' )  
+  
     submit = SubmitField('Submit')
+
 
 
 

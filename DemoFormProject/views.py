@@ -32,15 +32,24 @@ from flask   import Flask, render_template, flash, request
 from wtforms import Form, BooleanField, StringField, PasswordField, validators
 from wtforms import TextField, TextAreaField, SubmitField, SelectField, DateField
 from wtforms import ValidationError
+from wtforms import StringField, PasswordField, HiddenField, SubmitField
+from wtforms import IntegerField, DecimalField, FloatField, RadioField, BooleanField
 
 
-from DemoFormProject.Models.QueryFormStructure import QueryFormStructure 
+from DemoFormProject.Models.QueryFormStructure import DataQueryFormStructure 
 from DemoFormProject.Models.QueryFormStructure import LoginFormStructure 
 from DemoFormProject.Models.QueryFormStructure import UserRegistrationFormStructure 
 
 ###from DemoFormProject.Models.LocalDatabaseRoutines import IsUserExist, IsLoginGood, AddNewUser 
 
 db_Functions = create_LocalDatabaseServiceRoutines() 
+
+def get_states_choices():
+    df_short_state = pd.read_csv(path.join(path.dirname(__file__), 'static/Data/SARS1.csv'))
+    df1 = df_short_state.groupby('Country').sum()
+    l = df1.index
+    m = list(zip(l , l))
+    return m
 
 
 @app.route('/')
@@ -62,6 +71,9 @@ def contact():
         year=datetime.now().year,
         message='Your contact page.'
     )
+
+
+
 
 @app.route('/about')
 def about():
@@ -170,3 +182,28 @@ def sars():
         message='Explanation about the project and about the tools I used to write this project'
         )
 
+
+@app.route('/query', methods=['GET', 'POST'])
+def query():
+    form = DataQueryFormStructure(request.form)
+    
+  
+  
+    #Set the list of states from the data set of all US states
+    form.states.choices = get_states_choices() 
+   
+
+     
+    if (request.method == 'POST' ):
+
+        print('hello')
+    
+
+    return render_template('query.html', 
+            form = form, 
+            raw_data_table = "",
+            fig_image = "",
+            title='User Data Query',
+            year=datetime.now().year,
+            message='Please enter the parameters you choose, to analyze the database'
+        )
