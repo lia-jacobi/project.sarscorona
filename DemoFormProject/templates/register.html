@@ -1,12 +1,27 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<style>
+    body {
+        color: white;
+        background-color: black;
+    }
 
-<h1 style="background-color:DodgerBlue;">Register</h1>
+    td, tr, table {
+        font-size: 22px
+    }
 
-{% with messages = get_flashed_messages(with_categories=true) %}
-{% if messages %}
-    {% for message in messages %}
+    h2 {
+        position: relative;
+        left: 450px;
+    }
+</style>
+
+<h1>Register</h1>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+     {% for message in messages %}
 <h3>{{ message[1] }}</h3>
 <br />
     {% endfor %}
@@ -111,15 +126,5 @@
     </table>
 </form>
 
-<style>
 
-    td, tr, table {
-        font-size: 22px
-    }
-
-    h2 {
-        position: relative;
-        left: 450px;
-    }
-</style>
     {% endblock %}

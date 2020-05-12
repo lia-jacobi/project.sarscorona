@@ -52,8 +52,8 @@
     <Folder Include="DemoFormProject\templates\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DemoFormProject\static\Data\CORONA1.xlsx" />
-    <Content Include="DemoFormProject\static\Data\SARS1.xlsx" />
+    <Content Include="DemoFormProject\static\Data\CORONA.xlsx" />
+    <Content Include="DemoFormProject\static\Data\SARS1.csv" />
     <Content Include="DemoFormProject\static\Data\users.csv" />
     <Content Include="DemoFormProject\static\Pics\pic1.jpg" />
     <Content Include="DemoFormProject\templates\query.html" />

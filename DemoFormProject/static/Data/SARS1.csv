@@ -3,9 +3,8 @@ Australia,5,0
 Brazil,1,0
 Canada,250,38
 China,5327,348
-"China, Hong Kong Special Administrative Region",1755,298
-"China, Macao Special Administrative Region",1,0
-"China, Taiwan ",671,84
+Hong Kong,1755,298
+Taiwan ,671,84
 Colombia,1,0
 Finland,1,0
 France,7,1
@@ -18,10 +17,10 @@ Malaysia,5,2
 Mongolia,9,0
 New Zealand,1,0
 Philippines,14,2
-Republic of Ireland,1,0
-Republic of Korea,3,0
+Ireland,1,0
+Korea,3,0
 Romania,1,0
-Russian Federation,1,0
+Russia,1,0
 Singapore ,206,32
 South Africa,1,1
 Spain,1,0
@@ -29,5 +28,5 @@ Sweden,3,0
 Switzerland ,1,0
 Thailand ,9,2
 United Kingdom ,4,0
-United States^7,75,0
+USA,75,0
 Viet Nam,63,5

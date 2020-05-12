@@ -2,11 +2,24 @@
 
 {% block content %}
 
-<div class="row" style="background-image: url('/static/Pics/alien5.jpg'); background-size:100% 100%; color:white">
-    <div class="col-sm-1">
-    </div>
-    <div class="col-sm-10">
-        <div class="row" ">
+<style>
+
+    body {
+        color: white;
+        background-color: black;
+    }
+</style>
+
+<div class="row"  style="background-color:black;">
+    <div class="col-sm-10" style="background-color:black;">
+        <div class="row">
+
+            <h1>Data Query</h1>
+            <p>
+                Here, you can choose countries you would like to explore. Just choose countries, enter submit and compare the number of deaths each virus caused in each countries.
+            </p>
+            <p> *the coronavirus database contains all the information until 28\4\2020</p>
+            <img src="https://www.aljazeera.com/mritems/imagecache/mbdxxlarge/mritems/Images/2020/3/4/27921435f70b4f18975a598732c754b7_18.jpg" width="500" height="250">
 
             <h2>{{ title }}</h2>
 
@@ -20,7 +33,7 @@
 
             <br />
         </div>
-        <div class="row" ">
+        <div class="row">
 
             <form method=post>
                 {{ form.csrf }}
@@ -47,10 +60,15 @@
         </div>
 
     </div>
-    <div class="col-sm-1">
+    <div style="background-color:white;;width:50%; border-radius:5px">
+        {{ chart1 | safe }}
     </div>
+    <br /><br />
+    <div style="background-color:white; width:50%; border-radius:5px">
+        {{ chart2 | safe}}
+    </div>
+       
+   
 </div>
 
-
-        {% endblock %}
-
+{% endblock %}
