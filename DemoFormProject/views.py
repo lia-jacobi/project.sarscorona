@@ -221,7 +221,6 @@ def query():
         df_SARS=df_SARS.set_index('Country')
         df_SARS=df_SARS.loc[country_list]
         df_cases=df_SARS
-        h=df_SARS.columns.tolist()
         df_cases['sars']=df_SARS['total cases ']
         df_cases=df_cases.drop('total cases ', 1)
         df_cases=df_cases.drop('total deaths ', 1)
